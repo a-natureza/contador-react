@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./Contador.css";
 
-export default function Contador() {
-    const [numero, setNumero] = useState(0);
+export default function Contador({ titulo, valorInicial}) {
+    const [numero, setNumero] = useState(valorInicial);
 
     function incrementar() {
         setNumero(numero + 1);
@@ -14,11 +14,11 @@ export default function Contador() {
 
     return (
         <section className="contador">
-            <h1>Contador</h1>
+            <h1>{titulo}</h1>
             <p className="numero">{numero}</p>
             <div className="botoes">
-                <button onClick={incrementar} className="botao">Incrementar</button>
-                <button onClick={decrementar} className="botao">Decrementar</button>
+                <button onClick={incrementar} className="botao"> + </button>
+                <button onClick={decrementar} className="botao"> - </button>
             </div>
         </section>
     );

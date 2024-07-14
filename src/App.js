@@ -7,8 +7,8 @@ export default function App() {
         <div className="app">
             <h1>Dois Contadores</h1>
             <div className="contadores">
-                <Contador />
-                <Contador />
+                <Contador titulo="Contador 1" valorInicial={0} />
+                <Contador titulo="Contador 2" valorInicial={10} />
             </div>
         </div>
     );
